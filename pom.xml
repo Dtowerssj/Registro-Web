@@ -46,16 +46,16 @@
     </plugins>
   </build>
   <dependencies>
-    <dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>3.1.0</version>
-  </dependency>
-  <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+  	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
-    <version>42.2.18</version>
+    <version>42.2.10</version>
 </dependency>
   </dependencies>          
   <url>http://maven.apache.org</url>
