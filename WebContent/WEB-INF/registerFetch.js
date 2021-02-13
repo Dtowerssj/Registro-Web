@@ -1,5 +1,4 @@
-var form = document.getElementById("form");
-var botom = document.getElementById("boton");
+var form = document.getElementById("register");
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -10,16 +9,16 @@ form.addEventListener('submit', function(e){
         body: fd
     }
 
-    fetch('http://localhost:8080/RegistroWebII/', datos)
+    fetch('https://pantalla-registro.herokuapp.com/Register', datos)
     .then(res => res.json())
     .then(data => {
         if(data.status == 200){
-            window.open("http://localhost:8080/si.html", "_self");
+            window.open("_self");
             alert(data.message);
         }else{
-            window.open("http://localhost:8080/no.html", "_self");
+            window.open("_self");
             alert(data.message);
         }
     })
-    .catch(error => console.error()),
+    .catch(error => console.error())
 });
