@@ -2,7 +2,7 @@ package Controllers;
 
 public class Usuario {
 	
-	private String cedula, nombre, correo, birth, telefono, clave;
+/*	private String cedula, nombre, correo, birth, telefono, clave;
 
 	public Usuario() {
 		super();
@@ -66,5 +66,5 @@ public class Usuario {
 		this.clave = clave;
 	}
 	
-	
+	*/
 }

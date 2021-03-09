@@ -1,8 +1,6 @@
 package Servlets;
 
-
 import java.io.IOException;
-
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -11,14 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Controllers.Usuario;
+
 import Helpers.DB;
 import Helpers.Hashing;
+import javax.servlet.annotation.MultipartConfig;
+
 /**
- * Servlet implementation class Register
+ * Servlet implementation class Login
  */
-@WebServlet("/Register")
-public class Register extends HttpServlet {
+@MultipartConfig()
+@WebServlet("/Login")
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	Hashing hash = new Hashing();
@@ -27,7 +28,7 @@ public class Register extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Register() {
+    public Login() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,26 +45,13 @@ public class Register extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		response.setContentType("application/json");
+		PrintWriter out = response.getWriter();
 		
-		PrintWriter salida = response.getWriter();
+		String cedula = request.getParameter("cedula");
 		
-		String cedula=request.getParameter("cedula");
-		String nombre=request.getParameter("nombre");
-		String correo=request.getParameter("correo");
-		String birth=request.getParameter("birth");
-		String telefono=request.getParameter("telefono");
-		String clave=request.getParameter("clave");
-		String nuevaClave = hash.generarHash(clave);
-		System.out.println(nuevaClave);
-		//Usuario user = new Usuario(cedula, nombre, correo, birth, telefono, nuevaClave);
-		
-		String[] user = {cedula, nombre, correo, birth, telefono, clave};
-		String result = db.insert(user);
-		
-		System.out.println(result);
-		salida.println(result);
+		String result = db.doLogin(cedula, response);
+		out.println(result);
 	}
 
 }

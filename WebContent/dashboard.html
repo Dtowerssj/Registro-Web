@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Bienvenido</title>
+        <link rel="stylesheet" href="styles\style.css">
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="form-box-dashboard">
+                <form id="dashboard" class ="input-group" action="dashboard" method="post">
+                    <input type="number" min="1" max="99999999" class="input-field" name="cedula" placeholder="Cédula" required>
+                    <input type="text" class="input-field" name="nombre" placeholder="Nombre y apellido" required>
+                    <input type="email" class="input-field" name="correo" placeholder="Correo electrónico" required>
+                    <input id="fecha" type="date" class="input-field" name="birth" placeholder="Fecha de nacimiento" required>
+                    <input type="tel" minlength="11" maxlength="11" class="input-field"  name="telefono" placeholder="Número de teléfono" max="11" required>
+                    <input type="password" class="input-field" name="clave" placeholder="Contraseña" required> 
+                    <input type="text" class="input-field" name="estado" placeholder="Estado (opcional)" required>
+                    <input type="text" class="input-field"  name="ciudad" placeholder="Ciudad (opcional)" required>
+                    <input type="text" class="input-field" name="direccion" placeholder="Direccion (opcional)" required>
+                    <button type="submit" class="submit-btn-dashboard" value="enviar">Realizar cambios</button>
+                </form>
+                <button class="DL-btn">Eliminar usuario</button>
+        	</div>
+        </div>
+    </body>
+</html>

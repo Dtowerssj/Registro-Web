@@ -1,13 +1,10 @@
 package Helpers;
 
 import java.security.MessageDigest;
+
 import java.security.NoSuchAlgorithmException;
 
-import Servlets.Register;
-
 public class Hashing {
-	
-	Register user = new Register();
 	
 	public String generarHash(String clave) {
 		
