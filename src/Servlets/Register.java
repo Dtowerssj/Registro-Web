@@ -14,9 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import Controllers.Usuario;
 import Helpers.DB;
 import Helpers.Hashing;
-/**
- * Servlet implementation class Register
- */
+
+
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,25 +23,13 @@ public class Register extends HttpServlet {
 	Hashing hash = new Hashing();
 	DB db = new DB();
 	
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public Register() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("application/json");
@@ -59,7 +46,7 @@ public class Register extends HttpServlet {
 		System.out.println(nuevaClave);
 		//Usuario user = new Usuario(cedula, nombre, correo, birth, telefono, nuevaClave);
 		
-		String[] user = {cedula, nombre, correo, birth, telefono, clave};
+		String[] user = {cedula, nombre, correo, birth, telefono, nuevaClave};
 		String result = db.insert(user);
 		
 		System.out.println(result);

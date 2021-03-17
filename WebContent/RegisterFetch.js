@@ -1,4 +1,4 @@
-var formulario = document.getElementById("register");
+var formulario = document.getElementById("registerForm");
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
