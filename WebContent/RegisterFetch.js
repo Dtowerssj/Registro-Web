@@ -7,7 +7,7 @@ formulario.addEventListener('submit', function(e){
     var data ={
         method: "POST",
         body: formD
-    }
+    };
 
     fetch('https://pantalla-registro.herokuapp.com/Register', data)
     .then(respuesta => respuesta.json())
