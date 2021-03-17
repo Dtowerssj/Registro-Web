@@ -45,6 +45,7 @@ public class DB {
 		
 		prop.properties();	
 		driver = prop.getValue("driver");
+		System.out.println(driver);
 		url = prop.getValue("url");
 		pass = prop.getValue("pass");
 		uname = prop.getValue("usuario");
@@ -55,6 +56,7 @@ public class DB {
 			if (con == null) {
 			Class.forName(driver);
 			con=DriverManager.getConnection(url, uname, pass);
+			System.out.println("conexion exitosa");
 			}
 		} catch (SQLException | ClassNotFoundException e1 ) {
 			e1.printStackTrace();
