@@ -1,4 +1,5 @@
-var formulario = document.getElementById("registerForm");
+var formulario = document.getElementById("register");
+var submitButton = document.getElementById("submitButton");
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
@@ -10,8 +11,8 @@ formulario.addEventListener('submit', function(e){
     };
 
     fetch('https://pantalla-registro.herokuapp.com/Register', data)
-    .then(respuesta => respuesta.json())
-    .then(dataServ => {
+    .then( respuesta => respuesta.json())
+    .then( dataServ => {
         if(dataServ.status == 200){
             window.open("_self");
             alert(dataServ.message);

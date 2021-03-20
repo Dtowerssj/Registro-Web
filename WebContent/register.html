@@ -9,7 +9,7 @@
     <body>
         <div class="hero-image">
             <div class="form-box">
-                <form id="registerForm" class ="input-group">
+                <form id="register" class ="input-group">
                     <input type="number" min="1" max="99999999" class="input-field" name="cedula" placeholder="Cédula" required>
                     <input type="text" class="input-field" name="nombre" placeholder="Nombre y apellido" required>
                     <input type="email" class="input-field" name="correo" placeholder="Correo electrónico" required>
@@ -17,7 +17,7 @@
                     <input type="tel" minlength="11" maxlength="11" class="input-field"  name="telefono" placeholder="Número de teléfono" max="11" required>
                     <input type="password" class="input-field" name="clave" placeholder="Contraseña" required>  
                     <input type="checkbox" class="check-box" name="checkbox" required="Debes aceptar los términos y condiciones"><span>Aceptar términos y condiciones</span>
-                    <button type="submit" id="submitButton" class="submit-btn">Registrar</button>
+                    <button type="submit" id="submitButton" name="submitButton" class="submit-btn" value="registrarUsuario">Registrar</button>
                 </form>
         	</div>
         </div>

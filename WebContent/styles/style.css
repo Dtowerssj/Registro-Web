@@ -70,7 +70,6 @@
     position: absolute;
     width: 280px;
     transition: .5s;
-    left: 50px;
 }
 
 .input-field{
@@ -97,6 +96,9 @@ span{
 }
 
 
+#register{
+    left: 50px;
+}
 
 #login{
     left: 50px;
