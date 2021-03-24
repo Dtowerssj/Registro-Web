@@ -12,7 +12,7 @@
         <artifactId>maven-war-plugin</artifactId>        
         <version>3.2.3</version>
         <configuration>
-          <warSourceDirectory>RegistroWebII</warSourceDirectory>
+          <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
       <plugin>
@@ -46,12 +46,12 @@
     </plugins>
   </build>
   <dependencies>
-  	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>javax.servlet-api</artifactId>
-		<version>3.1.0</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
